@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Calculator</h2>
+        <button onclick="showResult()">showResult</button>
+        <h2 id="initial_Savings"></h2>
+        <h2 id="interest_Rate"></h2>
+        <h2 id="saving_Period"></h2>
+        <h2 id="total_Savings"></h2>
+    </div>
+    <script>
+        function showResult(){
+
+        
+        let initialSavings = parseFloat(prompt("Masukkan jumlah tabungan awal:"))
+        let interestRate = parseFloat(prompt("Masukkan tingkat bunga tahunan (%):"))
+        let savingPeriod = parseInt(prompt("Masukkan periode simpanan dalam tahun:"))
+              
+        let totalSavings = initialSavings + ((initialSavings * interestRate * savingPeriod)/100)
+
+        document.getElementById("initial_Savings").innerHTML = "Initial Savings : " + initialSavings;
+        document.getElementById("interest_Rate").innerHTML = "Interest Rate : " + interestRate;
+        document.getElementById("saving_Period").innerHTML = "Saving Period : " + savingPeriod;
+        document.getElementById("total_Savings").innerHTML = "Total Savings : " + totalSavings;
+        }
+    </script>
+</body>
+</html>

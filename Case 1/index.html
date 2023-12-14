@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="sortAlphabet()">Sort Alphabet</button>
+        <button onclick="sortNumberic()">Sort Numberic</button>
+        <h1 id="demo"> </h1>
+        <h1 id="demo2"></h1>
+    </div>
+
+    <script>
+        const points = [100, 1,2,7,5,90]
+        const names = ["aba", "cabi", "babu"]
+        document.getElementById("demo").innerHTML = points
+        document.getElementById("demo2").innerHTML = names
+
+        function sortAlphabet(){
+            names.sort()
+            document.getElementById("demo2").innerHTML = names
+        }
+        function sortNumberic(){
+            points.sort(()=> Math.random() - 0.5)
+            document.getElementById("demo").innerHTML = points
+        }
+        
+    </script>
+</body>
+</html>

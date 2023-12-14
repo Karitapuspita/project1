@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Kalkulator Gaji Karyawan</h2>
+        <button onclick="showResult()">showResult</button>
+        <h2 id="basicSalary"></h2>
+        <h2 id="bonus"></h2>
+        <h2 id="deductions"></h2>
+        <h2 id="netSalary"></h2>
+    </div>
+    <script>
+        let basicSalary = parseFloat(prompt("Masukkan gaji dasar karyawan: $"))
+        let bonus = parseFloat(prompt("Masukkan jumlah bonus: $ "))
+        let deductions = parseFloat(prompt("Masukkan jumlah potongan: $"))
+
+        let netSalary = basicSalary + bonus - deductions
+
+        document.getElementById("basicSalary").innerHTML = "Gaji dasar karyawan: $" + basicSalary
+        document.getElementById("bonus").innerHTML = "Bonus: $" + bonus
+        document.getElementById("deductions").innerHTML = "Potongan: $" + deductions
+        document.getElementById("netSalary").innerHTML = "Gaji bersih: $" + netSalary
+    </script>
+</body>
+</html>
